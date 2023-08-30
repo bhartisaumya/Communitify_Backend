@@ -5,12 +5,11 @@ Communitify helps users build and manage communities by allowing them to create,
 ## Table of Contents
 
 - [Overview](#overview)
-- [Installation](#npm install)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
@@ -21,9 +20,9 @@ Explain what your project is all about. What problem does it solve? What technol
 Provide instructions for how to install your project. Include any prerequisites, dependencies, or environment setup that is necessary.
 
 ```bash
-$ git clone https://github.com/yourusername/your-project.git
-$ cd your-project
-$ npm install  # Or any other installation commands
+$ git clone https://github.com/bhartisaumya/Communitify_Backend (To clone the github code)
+$ npm install (To install all the dependencies)
+$ npm start (To start the project)
 ```
 
 ## Usage
@@ -36,10 +35,10 @@ $ node app.js  # Example command
 
 ## Features
 
-List the key features of your project. Be concise but informative.
+Some of the features of the repository the mentioned below.
 
-- Feature 1: Description
-- Feature 2: Description
+- Feature 1: Authentication 
+- Feature 2: Access and Refresh Token using JWT
 
 ## Configuration
 
@@ -55,11 +54,6 @@ key = value
 
 If you welcome contributions from the community, explain how others can contribute to your project. Include guidelines for code formatting, submitting pull requests, and any other relevant information.
 
-## License
-
-Specify the license under which your project is distributed. For example:
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
