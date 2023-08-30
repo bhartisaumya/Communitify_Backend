@@ -11,7 +11,6 @@ This project utilizes various technologies and frameworks to accomplish its goal
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
-- [Contributing](#contributing)
 
 ## Overview
 
@@ -45,14 +44,5 @@ Key Features
 - Member Management: Invite and add members to your community, fostering a sense of belonging and collaboration. Easily manage member roles and permissions to ensure a smooth and organized community experience.
 
 - User Authentication: Simplify user interaction with secure login and signup functionalities. Communitify ensures that only authorized individuals can access and participate in your communities.
-
-## Contributing
-
-If you welcome contributions from the community, explain how others can contribute to your project. Include guidelines for code formatting, submitting pull requests, and any other relevant information.
-
-
-## Contact
-
-Provide a way for users to get in touch with you. This could be an email address, a link to your personal website, or a link to the project's GitHub repository.
 
 ---
