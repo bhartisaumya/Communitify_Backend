@@ -29,13 +29,6 @@ Communitify is a powerful platform designed to empower users in building and man
 
 Some of the features of the repository the mentioned below.
 
-
-Overview
-
-Communitify is a powerful platform designed to empower users in building and managing vibrant communities. With its user-friendly interface and comprehensive features, Communitify provides the tools you need to create, nurture, and sustain communities tailored to your vision.
-
-Key Features
-
 - Community Creation: Communitify allows you to effortlessly set up new communities. Define the purpose, name, and other essential details to give your community a unique identity.
 
 - Member Management: Invite and add members to your community, fostering a sense of belonging and collaboration. Easily manage member roles and permissions to ensure a smooth and organized community experience.
