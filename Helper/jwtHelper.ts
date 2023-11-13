@@ -11,7 +11,7 @@ const authModule = {
             const secret = process.env.ACCESS_TOKEN_SECRET || "super Secret key";
             const options = {
                 audience: userId,
-                expiresIn: '1h',
+                expiresIn: '24h',
                 issuer: 'bhartiking.com'
             };
             jwt.sign(payload, secret, options, (err, token) => {
@@ -53,9 +53,7 @@ const authModule = {
 
                 return next(createError.Unauthorized(message));
             }
-            
-            // req.body.userId = payload.aud;
-            console.log(req.body)
+            req.headers.userId = payload.aud;            
             next();
         })
     },

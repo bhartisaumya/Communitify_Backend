@@ -13,11 +13,12 @@ export const loginSchema = joi.object({
 })
 
 export const communitySchema = joi.object({
-    name : joi.string().required(),
+    name: joi.string().required(),
+    ownerId: joi.string(),
+    membersId: joi.array()
 })
 
-const MemberSchema = joi.object({
-    communityid : joi.required(),
-    userid : joi.required(),
-    roleid : joi.required(),
+export const memberSchema = joi.object({
+    communityId : joi.required(),
+    memberId : joi.required(),
 })

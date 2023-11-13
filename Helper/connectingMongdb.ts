@@ -1,6 +1,10 @@
 import mongoose from "mongoose";
 
-mongoose.connect("mongodb+srv://surya:vSiMXGiddMXKC03l@cluster0.u0iusxy.mongodb.net/?retryWrites=true")
+const MONGO_URL: string = process.env.MONGO_URL || 'a'
+
+
+// mongoose.connect("mongodb+srv://surya:vSiMXGiddMXKC03l@cluster0.u0iusxy.mongodb.net/?retryWrites=true")
+mongoose.connect(MONGO_URL)
 .then(() => {
     console.log("MongoDB Connected")
 })
@@ -8,7 +12,7 @@ mongoose.connect("mongodb+srv://surya:vSiMXGiddMXKC03l@cluster0.u0iusxy.mongodb.
     console.log(err.message);
 })
 
-process.on("beforeExit" , () => {
+process.on("beforeExit", () => {
     mongoose.disconnect();
     process.exit(0);
 });

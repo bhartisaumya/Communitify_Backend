@@ -5,7 +5,7 @@ import {registerSchema, loginSchema} from "../Helper/schemaValidation"
 import authModule from "../Helper/jwtHelper"
 import dotenv from "dotenv"
 dotenv.config()
-var router = express.Router();
+const router = express.Router();
 
 // Register new member
 router.post("/signin" , async (req , res , next) => {
@@ -55,6 +55,7 @@ router.post("/login", async (req, res, next) => {
 
         const aToken = await authModule.signAccessToken(doesExist.id);
         const rToken = await authModule.signRefreshToken(doesExist.id);
+
         res.send({accessToken: aToken, refreshToken: rToken})
 
     } catch (error: any){
@@ -68,7 +69,7 @@ router.post("/login", async (req, res, next) => {
 
 // Create new access and refresh token 
 
-router.post("/newRefreshAccessToken", async (req, res, next) => {
+router.post("/new-refresh-accessToken", async (req, res, next) => {
     try {
         const {refreshToken} = req.body;
 
@@ -86,8 +87,6 @@ router.post("/newRefreshAccessToken", async (req, res, next) => {
         next(error)        
     }
 })
-
-
 
 export = router;
 

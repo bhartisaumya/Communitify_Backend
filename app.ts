@@ -1,24 +1,23 @@
-import express, { Request, Response } from "express";
-import authHandler from "./Authentication/authHandler";
-import creteError from "http-errors"
+import express from "express";
+import authHandler from "./routes/authHandler";
 import "./Helper/connectingMongdb";
-import authModule from "./Helper/jwtHelper";
-import Community from "./Community/communityHandler";
+import jwtModule from "./Helper/jwtHelper";
+import Community from "./routes/communityHandler";
 
 const app = express();
 app.use(express.json())
 app.use(express.urlencoded({extended : true}));
 
 
-app.get('/', authModule.verifyAccessToken, (req, res, next) => {
+app.get('/', jwtModule.verifyAccessToken, (req, res, next) => {
     res.send('This is the home page');
 })
 
 app.use('/auth', authHandler);
-app.use('/community', Community)
+app.use('/community', Community);
 
 // Error Handling
-app.use((err: any, req: Request, res: Response, next: any) => {
+app.use((err: any, req: any, res: any, next: any) => {
     res.status(err.status || 500)
     res.send({
         error: {
@@ -28,6 +27,8 @@ app.use((err: any, req: Request, res: Response, next: any) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log("Listening on port 3000...");
+const PORT = process.env.PORT
+
+app.listen(PORT, () => {
+    console.log(`Listening on port ${PORT}...`);
 })

@@ -7,20 +7,23 @@ const CommunitySchema = new Schema({
         type: String,
         required: true,
     },
-    owner: {
+    ownerId: {
         type: String,
         required: false,
     },
-    created_at: {
+    membersId: {
+        type: Array
+    },
+    createdAt: {
         type: String,
         required: false,
     },
-    updated_at: {
+    updatedAt: {
         type: String,
         required: false,
     }
 })
 
-const Community = mongoose.model('community' , CommunitySchema);
+const Community = mongoose.model('community', CommunitySchema);
 
 export default Community;

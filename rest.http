@@ -1,6 +1,6 @@
-###HomePage
+### HomePage
 GET http://localhost:3000/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTI5NTUwMzksImV4cCI6MTY5Mjk1ODYzOSwiYXVkIjoiNjRlNWVhOWFhMWIyY2RiMThiYmM0NDRjIiwiaXNzIjoiYmhhcnRpa2luZy5jb20ifQ.P34ptwNJYmLo5uG88Ni4mgBRGts7B-KgMdcdZPAdwYU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTk0NTE4NDQsImV4cCI6MTY5OTQ1NTQ0NCwiYXVkIjoiNjU0YjkzYzQxOTFkMzg4NTJhYzhjOGI0IiwiaXNzIjoiYmhhcnRpa2luZy5jb20ifQ.tslG63XgbtfsT_iRc_-fQjnA9eabgnPbLxNzs1-V6kc
 
 
 ### Register
@@ -10,8 +10,8 @@ Content-Type: application/json
 {
     "firstName": "sklsnf",
     "lastName": "bharti",
-    "email": "thljkvxfdgdffsdcvik@gmail.com",
-    "password": "sjkkdnfkjds"
+    "email": "1@gmail.com",
+    "password": "12345"
 }
 
 ### Login
@@ -20,8 +20,8 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-    "email": "thljkvxfdgdffsdcvik@gmail.com",
-    "password": "sjkkdnfkjds"
+    "email": "1@gmail.com",
+    "password": "12345"
 }
 
 ### Generate new access and refresh token using existing refresh token
@@ -32,11 +32,31 @@ Content-Type: application/json
     "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTMxNTkyNzIsImV4cCI6MTcyNDcxNjg3MiwiYXVkIjoiNjRlNWVhOWFhMWIyY2RiMThiYmM0NDRjIiwiaXNzIjoiYmhhcnRpa2luZy5jb20ifQ.KMkEaZmJY3EfZlWL-ylph3Bh4fSPp3GxwLzzNiWSXjs"
 }
 
+### Get all community
+GET http://localhost:3000/community/all-community
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTk4Njc1OTEsImV4cCI6MTY5OTk1Mzk5MSwiYXVkIjoiNjU1MWRiMTdjNjk3MTc5NmFjNDg4ZWEwIiwiaXNzIjoiYmhhcnRpa2luZy5jb20ifQ.h3rH7MZR2nl-O7owqv4aGo1qIXdgoGGC7rTA6HsV0FI
+
+### Get all member of a community
+GET http://localhost:3000/community/all-member/6551db17c6971796ac488ea0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTk4Njc1OTEsImV4cCI6MTY5OTk1Mzk5MSwiYXVkIjoiNjU1MWRiMTdjNjk3MTc5NmFjNDg4ZWEwIiwiaXNzIjoiYmhhcnRpa2luZy5jb20ifQ.h3rH7MZR2nl-O7owqv4aGo1qIXdgoGGC7rTA6HsV0FI
+
+
 ### Create Community
-POST http://localhost:3000/community/createCommunity
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTMyMDUzMDIsImV4cCI6MTY5MzIwODkwMiwiYXVkIjoiNjRlNWVhOWFhMWIyY2RiMThiYmM0NDRjIiwiaXNzIjoiYmhhcnRpa2luZy5jb20ifQ.aMlDPAEsHuWpZPap0JQ0Vy4XxVmgdAG6bvw25DH1RGU
+POST http://localhost:3000/community/create-community
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTk4NjMzMTksImV4cCI6MTY5OTg2NjkxOSwiYXVkIjoiNjU1MWRiMTdjNjk3MTc5NmFjNDg4ZWEwIiwiaXNzIjoiYmhhcnRpa2luZy5jb20ifQ.yGsaW9vI-3UcKQDNEvmYIYYVrUjkjZWaYLBOsjXEFbM
 Content-Type: application/json
 
 {
-    "name" : "Nature Lover"
+    "name" : "Nature"
+}
+
+### Add member to the commuity
+
+PATCH http://localhost:3000/community/add-member
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2OTk4NjMzMTksImV4cCI6MTY5OTg2NjkxOSwiYXVkIjoiNjU1MWRiMTdjNjk3MTc5NmFjNDg4ZWEwIiwiaXNzIjoiYmhhcnRpa2luZy5jb20ifQ.yGsaW9vI-3UcKQDNEvmYIYYVrUjkjZWaYLBOsjXEFbM
+Content-Type: application/json
+
+{
+    "communityId": "6551db34c6971796ac488ea3",
+    "memberId": "123"
 }
